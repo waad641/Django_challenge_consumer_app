@@ -19,7 +19,8 @@ _BankTransaction:_ Django model representing bank transactions with fields like 
 
  # API Endpoints:
 
-   /api/webhook_receiver/: POST endpoint for receiving transaction data from the Producer App.
+    /api/webhook_receiver/: 'POST' endpoint for receiving transaction data from the Producer App.
+    
   # Tests:
 
 Unit tests for views and Celery tasks are available in tests.py.
