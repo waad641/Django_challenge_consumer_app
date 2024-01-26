@@ -55,6 +55,9 @@ on a teminal :
     python manage.py runserver
 
 # Run Celery worker: 
+
   celery -A consumer_project worker -l info
+  
 # Start Django development server: 
+
   python manage.py runserver
