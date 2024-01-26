@@ -5,59 +5,35 @@ This repository focus on the :
 # Overview:
 The Consumer App is responsible for receiving bank transaction data from the Producer App, processing it asynchronously using Celery, and updating the database with the processed results. It communicates with the Producer App through API calls.
 
-# Components:
 
-   # Tasks:
 
-_process_bank_transaction:_ Asynchronous Celery task that processes bank transaction data and updates the database.
-Views:
+Web Server:
 
-_webhook_receiver:_ Django REST Framework view that handles incoming POST requests from the Producer App and triggers the Celery task.
-Models:
+Manages incoming HTTP requests.
+Exposes endpoints for users to view and submit transactions.
+Django Application:
 
-_BankTransaction:_ Django model representing bank transactions with fields like account number, transaction amount, transaction date, and processed data.
+Contains views to render HTML pages for users.
+Sends requests to the Producer App to submit transactions.
+Celery Worker:
 
- # API Endpoints:
+Asynchronously processes submitted transactions.
+Calls the Producer App's webhook with processed data.
+Communication Flow:
 
-    /api/webhook_receiver/: 'POST' endpoint for receiving transaction data from the Producer App.
-    
-  # Tests:
+User interacts with the Consumer App's web interface.
+Consumer App sends transaction data to the Producer App for storage.
+Producer App stores the transaction in the database and initiates asynchronous processing.
+Celery worker in the Consumer App processes the transaction asynchronously.
+Once processing is complete, the Celery worker in the Consumer App sends processed data to the Producer App's webhook.
+Producer App updates the transaction in the database with the processed data.
+External Services:
 
-Unit tests for views and Celery tasks are available in tests.py.
-  # Settings:
+Celery Broker (RabbitMQ or similar):
+Manages the message queue for Celery tasks.
+Database Server:
+Hosts the databases for both Consumer and Producer Apps.
 
-Celery is configured in tasks.py.
-# Usage:
-on a teminal :
-   1/create a virtual environment : 
-    python -m venv venv_consumer
-    
-  2/Activate the virtual environment :
-    venv\Scripts\activate  //// if on Unix or MacOS : source venv/bin/activate
-    
- 3/Install dependencies :
-   pip install Django Celery requests django-celery-results
-   
- 4/create Django project and application 
-   django-admin startproject consumer_project
-   
- 5/locate to the created project 
-   cd consumer_project 
-   
- 6/ open the code on vscode :
-   . code 
-   
-# Run migrations : 
-    python manage.py makemigrations 
-    python manage.py migrate
-    
-# Start Django development server: 
-    python manage.py runserver
 
-# Run Celery worker: 
 
-    celery -A consumer_project worker -l info
-  
-# Start Django development server: 
 
-    python manage.py runserver
