@@ -27,23 +27,29 @@ Unit tests for views and Celery tasks are available in tests.py.
 Celery is configured in tasks.py.
 # Usage:
 on a teminal :
-   1/create a virtual environment : 
-    python -m venv venv_consumer
+   1/create a virtual environment :
+   
+     python -m venv venv_consumer
     
   2/Activate the virtual environment :
-    venv\Scripts\activate  //// if on Unix or MacOS : source venv/bin/activate
+  
+     venv\Scripts\activate  //// if on Unix or MacOS : source venv/bin/activate
     
  3/Install dependencies :
-   pip install Django Celery requests django-celery-results
+ 
+     pip install Django Celery requests django-celery-results
    
- 4/create Django project and application 
-   django-admin startproject consumer_project
+ 4/create Django project and application :
+ 
+    django-admin startproject consumer_project
    
- 5/locate to the created project 
-   cd consumer_project 
+ 5/locate to the created project :
+ 
+    cd consumer_project 
    
  6/ open the code on vscode :
-   . code 
+ 
+    . code 
    
 # Run migrations : 
     python manage.py makemigrations 
