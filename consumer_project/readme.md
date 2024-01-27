@@ -54,7 +54,7 @@ on a teminal :
  
     . code 
     
-# RabbitMQ donloading :
+# RabbitMQ downloading :
 
 before downloadingt rabbitMQ , 
 just make sure you have successfully installed Erlang/OTP from   https://www.erlang.org/downloads
