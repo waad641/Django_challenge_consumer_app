@@ -1,6 +1,6 @@
 # Consumer App Documentation :
 
-The Consumer App serves as the front-end interface for users to interact with the banking system. It communicates with the Producer App to submit and retrieve bank transactions. Below is a high-level overview of the key components:
+The Consumer App serves as the front-end interface for users to interact with the banking system. It communicates with the Producer App to submit and retrieve bank transactions. Below is an overview of the key components:
 
 # 1.Views and Forms:
 
@@ -37,7 +37,7 @@ The Consumer App serves as the front-end interface for users to interact with th
 
 # 6.User Interface:
 
-   - The user interface is designed with the `submit_transaction.html` form for transaction submission.
+   - The user interface is designed with the `bank_transaction_list.html` form for transaction submission.
 
    - The `transaction_list` view displays a list of transactions in a user-friendly format.
 
