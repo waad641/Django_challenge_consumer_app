@@ -1,4 +1,3 @@
-# consumer_app/models.py
 from django.db import models
 
 class BankTransaction(models.Model):
