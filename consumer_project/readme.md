@@ -25,6 +25,7 @@ Unit tests for views and Celery tasks are available in tests.py.
   # Settings:
 
 Celery is configured in tasks.py.
+RabbitMQ is configured in settings.py
 # Usage:
 on a teminal :
    1/create a virtual environment :
@@ -77,3 +78,10 @@ from  https://www.rabbitmq.com/download.html
 # Start Django development server: 
 
     python manage.py runserver
+
+# versions:
+   python : 3.11.5
+   django : 5.0.1
+   celery : 5.3.6
+   rabbitMQ : 3.12.12.0
+   Erlang/OTP : 26.2.1.0
