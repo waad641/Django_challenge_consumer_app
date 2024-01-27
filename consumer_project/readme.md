@@ -38,6 +38,8 @@ on a teminal :
  3/Install dependencies :
  
      pip install Django Celery requests django-celery-results
+
+     (or you can proceed with installing each dependency alone : pip insatll Djanggo   / pip install celery ... ) 
    
  4/create Django project and application :
  
@@ -50,7 +52,17 @@ on a teminal :
  6/ open the code on vscode :
  
     . code 
-   
+    
+# RabbitMQ donloading :
+
+before downloadingt rabbitMQ , 
+just make sure you have successfully installed Erlang/OTP from   https://www.erlang.org/downloads
+after configuring Erlang/OTP (run the .exe file ) you can inastall the RabbitMQ 
+from  https://www.rabbitmq.com/download.html
+  to make sure rabbitMQ is installed successfuly , open rabbitMQ Server -start and run this command:
+
+    rabbitmqctl status
+    
 # Run migrations : 
     python manage.py makemigrations 
     python manage.py migrate
