@@ -80,12 +80,12 @@ from  https://www.rabbitmq.com/download.html
     python manage.py runserver
 
 # versions:
-   python : 3.11.5,
+   python : 3.11.5
    
-   django : 5.0.1,
+   django : 5.0.1
    
-   celery : 5.3.6,
-   
-   rabbitMQ : 3.12.12.0,
+   celery : 5.3.6
+
+   rabbitMQ : 3.12.12.0
    
    Erlang/OTP : 26.2.1.0
